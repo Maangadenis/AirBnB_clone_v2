@@ -7,7 +7,8 @@ from datetime import datetime
 
 
 def do_pack():
-    """ Generates a .tgz archive from the contents `web_static/` in AirBnB clone
+    """ Generates a .tgz archive from the contents
+    `web_static/` in AirBnB clone
     repo.
 
     Retruns:

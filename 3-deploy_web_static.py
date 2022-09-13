@@ -10,8 +10,8 @@ env.user = 'ubuntu'
 
 
 def do_pack():
-    """ Generates a .tgz archive from the contents `web_static/` in AirBnB clone
-    repo.
+    """ Generates a .tgz archive from the contents
+    `web_static/` in AirBnB clone repo.
 
     Retruns:
         (str): full path from current directory to `.tgz` archive created in
