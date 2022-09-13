@@ -57,7 +57,8 @@ class Place(BaseModel, Base):
 
         @amenities.setter
         def amenities(self, obj):
-            """ Adds id of object to list `self.amenity_ids` if object is `Amenity`
+            """ Adds id of object to list `self.amenity_ids`
+            if object is `Amenity`
             type """
             if type(obj) == 'Amenity':
                 self.amenity_ids.append(obj.id)

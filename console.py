@@ -2,6 +2,7 @@
 """ Console Module """
 # import re
 import cmd
+from msilib.schema import Error
 import sys
 from shlex import split
 from models.base_model import BaseModel
@@ -312,7 +313,7 @@ class HBNBCommand(cmd.Cmd):
                 #     att_val = HBNBCommand.types[att_name](att_val)
                 try:
                     att_val = eval(att_val)
-                except:
+                except SyntaxError:
                     pass
                 # update dictionary with name, value pair
                 new_dict.__dict__.update({att_name: att_val})
@@ -323,6 +324,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
